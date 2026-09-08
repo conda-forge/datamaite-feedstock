@@ -1,0 +1,6 @@
+# Override conda-forge's global python_min, which is '3.11' as of the
+# current conda-forge-pinning. datamaite declares
+# requires-python = ">=3.10,<3.15", so the noarch package must keep
+# building against 3.10 and advertising it in its run constraint.
+python_min:
+- '3.10'
