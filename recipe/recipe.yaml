@@ -2,6 +2,8 @@ schema_version: 1
 
 context:
   version: "0.4.1"
+  # Override the global conda-forge python_min (3.11); datamaite supports 3.10.
+  python_min: "3.10"
 
 package:
   name: datamaite
@@ -12,7 +14,7 @@ source:
   sha256: 9b9706e858dc3c400d46229a96c9f01e813cc43f9b4a4c1a72e6a83e07c0dd45
 
 build:
-  number: 0
+  number: 1
   noarch: python
   # UV_DYNAMIC_VERSIONING_BYPASS is inert on 0.4.1 (sdist has a static
   # version and build-system requires only hatchling). It is load-bearing
